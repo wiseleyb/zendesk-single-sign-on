@@ -3,3 +3,7 @@
 <p>This is your home page. Use the menu at the top to sign in / sign out.</p>
 
 <p><%= link_to 'Go to Zendesk', new_zendesk_session_path %></p>
+
+<% if params[:kind] || params[:message] %>
+  <p><%= debug(params) %></p>
+<% end %>

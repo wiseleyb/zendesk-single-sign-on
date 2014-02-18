@@ -15,7 +15,8 @@ class ZendeskSessionsController < ApplicationController
       # If the submitted credentials pass, then log user into Zendesk
       sign_into_zendesk(current_user)
     else
-      render :new, :notice => "Invalid credentials"
+      flash[:notice] = 'Join Causes to contact support'
+      redirect_to home_path
     end
   end
 
