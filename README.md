@@ -26,6 +26,9 @@ Since Zendesk single sign requires a live url it's easiest to play around with t
 ### Set your Zendesk EVN variables
 * heroku config:set ZENDESK_SHARED_SECRET= ...
 * heroku config:set ZENDESK_SUBDOMAIN= ...
+* also set these in your .bash_profile, reload bash_profile, restart rails - this still won't work in dev but it won't crash
+* export ZENDESK_SHARED_SECRET="..."
+* export ZENDESK_SUBDOMAIN="..."
 
 ## Troubles?
 

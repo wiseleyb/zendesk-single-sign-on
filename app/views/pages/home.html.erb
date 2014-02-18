@@ -1,8 +1,23 @@
 <% title("Home Page") %>
-<h1>Home Page <small>views/pages/home.html.erb</small></h1>
+<h1>Zendesk Single Sign On Test</h1>
+
+<p>You can signin as any of these people</p>
+<ul>
+  <% 5.times do |i| %>
+    <li>user<%=i+1%> / 1234</li>
+  <% end %>
+</ul>
+
 <p>This is your home page. Use the menu at the top to sign in / sign out.</p>
 
 <p><%= link_to 'Go to Zendesk', new_zendesk_session_path %></p>
+
+<p>Sample Zendesk urls</p>
+<ul>
+  <% User.all.each do |u| %>
+    <li><%=u.username%>/<%=u.email%> <%=link_to Zendesk.sign_into_zendesk(u)%></li>
+  <% end %>
+</ul>
 
 <% if params[:kind] || params[:message] %>
   <p><%= debug(params) %></p>
