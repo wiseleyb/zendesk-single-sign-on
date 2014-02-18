@@ -4,13 +4,13 @@
 # can use Zendesk SSO from your controller like this example.
 require 'securerandom' unless defined?(SecureRandom)
 
-class ZendeskSessionController < ApplicationController
+class ZendeskSessionsController < ApplicationController
   # Configuration
 
   ZENDESK_SHARED_SECRET = ENV["ZENDESK_SHARED_SECRET"]
   ZENDESK_SUBDOMAIN     = ENV["ZENDESK_SUBDOMAIN"]
 
-  def create
+  def new
     if current_user
       # If the submitted credentials pass, then log user into Zendesk
       sign_into_zendesk(current_user)
