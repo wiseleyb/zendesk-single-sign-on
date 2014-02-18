@@ -26,3 +26,7 @@ Since Zendesk single sign requires a live url it's easiest to play around with t
 ### Set your Zendesk EVN variables
 * heroku config:set ZENDESK_SHARED_SECRET= ...
 * heroku config:set ZENDESK_SUBDOMAIN= ...
+
+## Troubles?
+
+You can tail the logs on Heroku with `heroku logs`
