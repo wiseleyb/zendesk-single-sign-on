@@ -9,6 +9,8 @@ gem 'turbolinks', '~> 2.1.0'
 gem 'jbuilder', '~> 1.5.3'
 gem 'bcrypt-ruby', '~> 3.1.2'
 
+gem 'pg'
+
 # for zendesk
 gem 'jwt'
 
@@ -33,7 +35,6 @@ gem 'font-awesome-sass', '~> 4.0.2'
 
 # production gems for heroku
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
 

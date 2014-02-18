@@ -1,4 +1,11 @@
 <h1>Admin Zone <small>logged in as <%= current_user.username %></small></h1>
 
+<p>
+  <% if (zss = ENV['ZENDESK_SHARED_SECRET']) && (zs = EVN['ZENDESK_SESSION']) %>
+    ZENDESK ENVs: <%= zss[0..4]%>... <%= zs %>
+  <% else %>
+    You need to set your Zendesk environmnet variables
+  <% end %>
+</p>
+
 <p><%= link_to "Edit your account", edit_admin_user_path(current_user) %></p>
-  
