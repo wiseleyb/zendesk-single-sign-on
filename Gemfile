@@ -9,6 +9,9 @@ gem 'turbolinks', '~> 2.1.0'
 gem 'jbuilder', '~> 1.5.3'
 gem 'bcrypt-ruby', '~> 3.1.2'
 
+# for zendesk
+gem 'jwt'
+
 group :doc do
   gem 'sdoc', require: false
 end
