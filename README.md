@@ -2,10 +2,6 @@
 
 This is a very basic Rails app to test Zendesk's single sign on.
 
-## Current status
-
-Zendesk is rejecting the token. Contacted support and, if there's something wrong with this app will fix.
-
 ## Setup
 
 * git clone https://github.com/wiseleyb/zendesk-single-sign-on
@@ -39,8 +35,10 @@ Since Zendesk single sign requires a live url it's easiest to play around with t
 
 ## Set up your settings on Zendesk
 
-![Zendesk settings](http://i.imgur.com/5NeSTqk.png)
+![Zendesk settings](http://imgur.com/uxpMM9k.png)
 
 ## Troubles?
 
 You can tail the logs on Heroku with `heroku logs`
+
+Or you can login to console: `heroku run bash` then `bundle exec rails c`
