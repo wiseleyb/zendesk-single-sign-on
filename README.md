@@ -1,6 +1,18 @@
 # Zendesk single sign on example
 
-This is a very basic Rails app to test Zendesk's single sign on.
+This is a very basic Rails app to test Zendesk's single sign on. It's basically
+just a wrapper around Zendesks sample code:
+https://github.com/zendesk/zendesk_jwt_sso_examples/blob/master/ruby_on_rails_jwt.rb
+
+There's a chance the sample app is still running on Heroku:
+http://shrouded-refuge-7742.herokuapp.com/ - although that's tied to a
+test account on Zendesk that expires soon.
+
+For more on how to do single-sign on with Zendesk see their help article:
+https://support.zendesk.com/entries/23675367-Setting-up-single-sign-on-with-JWT-JSON-Web-Token-
+
+All this does is, if you're logged in, it will generate a token that Zendesk will auto
+login/create a user for on their end.
 
 ## Setup
 
