@@ -37,6 +37,10 @@ Since Zendesk single sign requires a live url it's easiest to play around with t
 * login: admin 1234
 * go to localhost:3000 - note - none of the zendesk stuff will work in dev
 
+## Set up your settings on Zendesk
+
+![Zendesk settings](http://i.imgur.com/5NeSTqk.png)
+
 ## Troubles?
 
 You can tail the logs on Heroku with `heroku logs`
