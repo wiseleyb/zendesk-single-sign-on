@@ -15,7 +15,8 @@
 <p>Sample Zendesk urls</p>
 <ul>
   <% User.all.each do |u| %>
-    <li><%=u.username%>/<%=u.email%> <%=link_to Zendesk.sign_into_zendesk(u)%></li>
+    <% zurl = Zendesk.sign_into_zendesk(u) %>
+    <li><%=u.username%>/<%=u.email%> <%=link_to zurl, zurl %></li>
   <% end %>
 </ul>
 
